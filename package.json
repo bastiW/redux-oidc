@@ -29,34 +29,34 @@
   "author": "Maximilian Mantz",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
-    "babel-plugin-rewire": "^1.0.0",
+    "babel-plugin-rewire": "^1.2.0",
     "babel-plugin-uglify": "^1.0.2",
-    "babel-polyfill": "^6.20.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "babel-register": "^6.18.0",
-    "babel-template": "^6.16.0",
-    "babel-types": "^6.21.0",
+    "babel-register": "^6.26.0",
+    "babel-template": "^6.26.0",
+    "babel-types": "^6.26.0",
     "browserify": "^13.3.0",
     "chai": "^3.5.0",
     "cheerio": "^0.22.0",
-    "co-mocha": "^1.1.3",
-    "enzyme": "^2.7.0",
-    "es6-promise": "^4.0.5",
+    "co-mocha": "^1.2.2",
+    "enzyme": "^2.9.1",
+    "es6-promise": "^4.2.8",
     "expect": "^1.20.2",
     "file-loader": "^0.9.0",
     "jsdom": "^9.9.1",
-    "json-loader": "^0.5.4",
-    "mocha": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "mocha": "^3.5.3",
     "mocha-webpack": "^0.7.0",
     "node-storage-shim": "^1.0.1",
     "sinon": "^1.17.7",
-    "webpack": "^2.2.0",
-    "webpack-node-externals": "^1.5.4"
+    "webpack": "^2.7.0",
+    "webpack-node-externals": "^1.7.2"
   },
   "peerDependencies": {
     "react": ">=16.8.4",
@@ -67,5 +67,9 @@
     "transform": [
       "reactify"
     ]
+  },
+  "dependencies": {
+    "oidc-client": "^1.10.1",
+    "react": "^16.13.1"
   }
 }
