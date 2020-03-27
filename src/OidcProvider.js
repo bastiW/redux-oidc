@@ -35,7 +35,7 @@ class OidcProvider extends React.Component {
 
   // event callback when the user has been loaded (on silent renew or redirect)
   onUserLoaded = (user) => {
-    this.props.store.dispatch(userFound(user));
+    this.props.store.dispatch(userFound(JSON.parse(user.toStorageString())));
   };
 
   // event callback when silent renew errored
