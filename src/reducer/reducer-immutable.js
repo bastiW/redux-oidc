@@ -62,7 +62,7 @@ export default function createImmutableReducer(immutable) {
       return reducer;
   } catch (error) {
     reducer = () => {
-      console.error("redux-oidc: You must install immutable-js for the immutable reducer to work!");
+      console.error("redux-oidc-fork: You must install immutable-js for the immutable reducer to work!");
     };
   }
 }

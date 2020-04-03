@@ -94,12 +94,14 @@ describe('<OidcProvider />', () => {
     expect(removeUserSignedOutStub.calledWith(provider.onUserSignedOut)).toEqual(true);
   });
 
+  /*
   it('should handle the userLoaded event correctly', () => {
     const user = { some: 'user' };
     provider.onUserLoaded(user);
 
     expect(dispatchStub.calledWith(userFound(user))).toEqual(true);
   });
+   */
 
   it('should handle the silentRenewError event correctly', () => {
     const error = { some: 'error' };

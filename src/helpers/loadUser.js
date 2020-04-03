@@ -16,7 +16,7 @@ export function getReduxStore() {
 // callback function called when the user has been loaded
 export function getUserCallback(user) {
   if (user && !user.expired) {
-    reduxStore.dispatch(userFound(user));
+    reduxStore.dispatch(userFound(JSON.parse(user.toStorageString())));
   } else if (!user || (user && user.expired)) {
     reduxStore.dispatch(userExpired());
   }
@@ -25,7 +25,7 @@ export function getUserCallback(user) {
 
 // error callback called when the userManager's loadUser() function failed
 export function errorCallback(error) {
-  console.error(`redux-oidc: Error in loadUser() function: ${error.message}`);
+  console.error(`redux-oidc-fork: Error in loadUser() function: ${error.message}`);
   reduxStore.dispatch(loadUserError());
 }
 
@@ -33,11 +33,11 @@ export function errorCallback(error) {
 // NOTE: use only when silent renew is configured
 export default function loadUser(store, userManager) {
   if (!store || !store.dispatch) {
-    throw new Error('redux-oidc: You need to pass the redux store into the loadUser helper!');
+    throw new Error('redux-oidc-fork: You need to pass the redux store into the loadUser helper!');
   }
 
   if (!userManager || !userManager.getUser) {
-    throw new Error('redux-oidc: You need to pass the userManager into the loadUser helper!');
+    throw new Error('redux-oidc-fork: You need to pass the userManager into the loadUser helper!');
   }
 
   reduxStore = store;

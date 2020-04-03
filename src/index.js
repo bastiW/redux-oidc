@@ -1,6 +1,6 @@
 import createOidcMiddleware from './oidcMiddleware';
 
-// redux-oidc components
+// redux-oidc-fork components
 export const createUserManager = require('./helpers/createUserManager').default;
 export const processSilentRenew = require('./helpers/processSilentRenew').default;
 export const loadUser = require('./helpers/loadUser').default;

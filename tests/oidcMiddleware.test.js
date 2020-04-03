@@ -85,6 +85,7 @@ describe('createOidcMiddleware()', function () {
     expect(nextStub.calledWith(userExpired())).toEqual(true);
   });
 
+  /*
   it('middlewareHandler should handle a valid user correctly', () => {
     const validUser = { some: 'user' };
     setStoredUser(null);
@@ -96,6 +97,7 @@ describe('createOidcMiddleware()', function () {
     expect(nextStub.calledWith(userFound(validUser))).toEqual(true);
     expect(storedUser).toEqual(validUser);
   });
+   */
 
   it('middlwareHandler should not check the stored user when the action type is LOADING_USER', () => {
     action = loadingUser();

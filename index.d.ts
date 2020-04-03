@@ -1,4 +1,4 @@
-declare module "redux-oidc" {
+declare module "redux-oidc-fork" {
   import { SignoutResponse, UserManager, UserManagerSettings, User } from "oidc-client";
   import { Map, fromJS } from "immutable";
   import { Middleware, Store } from "redux";

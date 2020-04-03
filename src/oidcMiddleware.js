@@ -32,13 +32,13 @@ export function getUserCallback(user) {
     nextMiddleware(userExpired());
   } else {
     storedUser = user;
-    nextMiddleware(userFound(user));
+    nextMiddleware(userFound(JSON.parse(user.toStorageString())));
   }
 }
 
 // callback for the userManager's getUser.catch
 export function errorCallback(error) {
-  console.error(`redux-oidc: Error loading user in oidcMiddleware: ${error.message}`);
+  console.error(`redux-oidc-fork: Error loading user in oidcMiddleware: ${error.message}`);
   nextMiddleware(loadUserError());
 }
 
